@@ -1,0 +1,19 @@
+/* reading mode */
+.markdown-preview-view p {
+	text-align: justify;
+	text-justify: inter-word;	
+}
+
+/* source view and live preview */
+.markdown-source-view.mod-cm6 .cm-line {
+	text-align: justify;
+	text-justify: inter-word;	
+}
+
+.workspace-split.mod-horizontal.mod-left-split *, .workspace-split.mod-horizontal.mod-right-split * 
+{
+        font-size: 14px;
+        font-weight: 450;
+        color: rgb(96,96,96);
+}
+
