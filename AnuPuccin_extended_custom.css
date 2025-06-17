@@ -1,0 +1,143 @@
+/* @settings
+name: Extended Customize for AnuPpuccin Theme
+id: my-custom-view
+settings:
+# File Browser
+    -
+    	id: colors-section-header
+    	title: File Browser
+    	description: Colors for folders and files, Extended settings for fonts
+    	type: heading
+    	level: 1
+    	collapsed: true
+	- 
+		id: hide-guidlines
+		title: Hide guidlines in file browser
+        description: Hide guidlines in file browser
+        type: class-toggle
+    -
+    	id: font-folder-size
+    	title: Size font for folders in file browser
+    	description: select font size for folders
+        type: class-toggle
+    
+    -
+    	id: font-file-size
+    	title: Size font for files in file browser
+    	description: select font size for files
+        type: class-toggle
+    -
+    	id: color-folders
+    	title: Colors for folders in file browsers
+    	description: select colors for folders
+        type: class-toggle
+    -
+    	id: color-files
+    	title: Colors for files in file browsers
+    	description: select colors for files
+        type: class-toggle
+    -
+    	id: accent-folder
+        title: Folder Color
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            -
+                id: accent-folder-rgb
+                format: rgb
+        default: '#007AFF'
+    -
+    	id: accent-file
+        title: File Color
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            -
+                id: accent-file-rgb
+                format: rgb
+        default: '#007AFF'
+    -
+    	id: folder-font-size
+        title: Folder font size
+        description: The maximum font size in rem units
+        type: variable-number
+        default: 1.05
+        format: em
+    -
+    	id: folder-font-width
+        title: Folder font width
+        description: The maximum font size in rem units
+        type: variable-number
+        default: 450
+        format:
+    -
+    	id: file-font-size
+        title: File font size
+        description: The maximum font size in rem units
+        type: variable-number
+        default: 1.02
+        format: em
+    -
+    	id: file-font-width
+        title: File font width
+        description: The maximum font size in rem units
+        type: variable-number
+        default: 450
+        format:
+
+*/
+.hide-guidlines {
+    --nav-indentation-guide-width: unset;
+}
+
+.font-folder-size .nav-folder-title-content {
+font-weight: var(--folder-font-width);
+font-size: var(--folder-font-size);
+}
+
+.font-file-size .nav-file-title-content {
+font-weight: var(--file-font-width);
+font-size: var(--file-font-size);
+}
+
+.color-folders .nav-folder-title-content {
+color: var(--accent-folder);
+}
+
+.color-files .nav-file-title-content {
+color: var(--accent-file);
+}
+
+.anp-collapse-folders .workspace-leaf-content:not([data-type=search]) .tree-item .collapse-icon {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 24' fill='none' stroke='currentColor' stroke-linejoin='round' stroke-linecap='round' stroke-width='2'%3E%3Cpath d='M6 14l1.45-2.9A2 2 0 0 1 9.24 10H22a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H20a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E%0A");
+  -webkit-mask-repeat: no-repeat;
+  background-color: var(--accent-folder);
+  display: flex;
+  flex-basis: 100%;
+  height: 16px;
+  width: 17px;
+  /* */
+}
+
+.anp-file-icons .nav-file .nav-file-title[data-path]::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z'/%3E%3Cpath d='M14 2v6h6m-4 5H8m8 4H8m2-8H8'/%3E%3C/svg%3E%0A");
+  -webkit-mask-repeat: no-repeat;
+  background-color: var(--accent-file);
+  content: "";
+  display: flex;
+  flex-shrink: 0;
+  height: var(--size-4-4);
+  margin-left: calc(-1 * var(--size-4-5));
+  opacity: var(--icon-opacity);
+  position: absolute;
+  width: var(--size-4-4);
+  /* */
+}
+
+
+
+
+
+
